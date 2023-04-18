@@ -1,6 +1,7 @@
 # 💚 UMC MJU 4th Server A-인문
-<br>
 [UMC MJU 3rd를 위한 깃허브 사용법 및 규칙](https://makeus-challenge.notion.site/UMC-MJU-3rd-GITHUB-RULE-0433805af0af43029592d0467ea50535)
+
+<br>
 
 ## 🌱 Pull Requests Rule 
 **Title**: N주차미션_닉네임 (ex. 1주차미션_제이콥)
