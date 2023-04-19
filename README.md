@@ -2,6 +2,7 @@
 [UMC MJU 4th를 위한 깃허브 사용법 및 규칙](https://makeus-challenge.notion.site/UMC-MJU-GITHUB-RULE-37679fa4f8fb4af4b2d0504b2a3e432d)
 
 <br>
+
 ## 1. 자신의 브랜치에 프로젝트 업로드하기
 
 ## 2. Main 브랜치로 PR(Pull Request) 날리기
