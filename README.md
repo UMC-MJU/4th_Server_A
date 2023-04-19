@@ -22,6 +22,6 @@ TEST: 테스트 코드 추가 및 수정
 <br>
 
 ## 🍀 Members
-| [![텍스트](https://avatars.githubusercontent.com/u/90025978?v=4)](https://github.com/leeseunghakhello) | [![텍스트](https://avatars.githubusercontent.com/u/116648310?v=4)](https://github.com/dtd1614) | [![텍스트](https://avatars.githubusercontent.com/u/102508014?v=4)](https://github.com/KanuBang) | [![텍스트](https://avatars.githubusercontent.com/u/81205358?v=4)](https://github.com/sol0503) |
+| [![텍스트](https://avatars.githubusercontent.com/u/90025978?v=4)](https://github.com/leeseunghakhello) | [![텍스트](https://avatars.githubusercontent.com/u/116648310?v=4)](https://github.com/dtd1614) | [![텍스트](https://avatars.githubusercontent.com/u/102508014?v=4)](https://github.com/KanuBang) | [![텍스트](https://avatars.githubusercontent.com/u/88308933?v=4)](https://github.com/xloyeon) |
 |:---:|:---:|:---:|:---:|
 | 학이/이승학 | 준/이우성 | 민디/김민기 | 그린/안승연 |
