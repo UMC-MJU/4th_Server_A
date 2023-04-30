@@ -1,4 +1,4 @@
-package 그린_안승연.week5;
+package 그린_안승연.week5.조건문;
 
 import java.util.Scanner;
 
@@ -9,7 +9,7 @@ public class n2525 {
         int hour = sc.nextInt();
         int minute = sc.nextInt();
         int charge = sc.nextInt();
-        
+
         int time = minute + charge;
 
         while (time >= 60) {

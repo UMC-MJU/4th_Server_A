@@ -1,4 +1,4 @@
-package 그린_안승연.week5;
+package 그린_안승연.week5._2차원배열;
 
 import java.util.Scanner;
 

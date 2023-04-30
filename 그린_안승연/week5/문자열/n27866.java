@@ -1,4 +1,4 @@
-package 그린_안승연.week5;
+package 그린_안승연.week5.문자열;
 
 import java.util.Scanner;
 

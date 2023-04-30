@@ -1,4 +1,4 @@
-package 그린_안승연.week5;
+package 그린_안승연.week5.반복문;
 
 import java.util.Scanner;
 
