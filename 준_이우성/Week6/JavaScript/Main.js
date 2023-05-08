@@ -18,7 +18,6 @@ class User {
         this.email = email;
         this.phone = phone;
     }
-
     printInfo() {
         console.log("Name: " + this.name);
         console.log("Email: " + this.email);
@@ -29,7 +28,6 @@ class User {
 //3번
 const user = new User("이우성", "dtd1614@naver.com", "010-4575-2518");
 user.printInfo();
-
 const prompt = require("prompt-sync")();
 const num = prompt("Enter a number");
 try {
