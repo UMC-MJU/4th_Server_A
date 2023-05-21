@@ -11,6 +11,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.net.MalformedURLException;
+
 @RequiredArgsConstructor
 @Service
 public class BoardService {
@@ -30,7 +32,7 @@ public class BoardService {
     }
 
     @Transactional
-    public Board save(BoardRequestDto requestDto){
+    public Board save(BoardRequestDto requestDto) throws MalformedURLException {
         return boardRepository.save(requestDto.toEntity());
     }
 
