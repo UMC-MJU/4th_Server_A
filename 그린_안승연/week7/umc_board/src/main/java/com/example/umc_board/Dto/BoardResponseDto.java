@@ -29,6 +29,7 @@ public class BoardResponseDto {
     @ApiModelProperty(example = "tester")
     private String user;
 
+    @ApiModelProperty(example = "[[\"20522613\", \"거북당\", \"http://place.map.kakao.com/20522613\"]]")
     private List<List<String>> placeList;
 
     public static BoardResponseDto of(Board board){

@@ -30,6 +30,7 @@ public class BoardRequestDto {
     @ApiModelProperty(example = "tester")
     private User user;
 
+    @ApiModelProperty(example = "[[\"20522613\", \"거북당\", \"http://place.map.kakao.com/20522613\"]]")
     private List<List<String>> placeList;
 
     @Builder

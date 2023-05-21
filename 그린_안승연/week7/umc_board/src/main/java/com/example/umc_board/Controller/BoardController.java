@@ -63,6 +63,8 @@ public class BoardController {
     }
 
     @GetMapping("/kakaomap/{keyword}")
+    @ApiOperation(value = "카카오맵 키워드 검색 API")
+    @ApiImplicitParam(name = "keyword", value = "키워드")
     public ResponseEntity<String> keywordMap(@PathVariable(value = "keyword") String keyword) throws IOException, URISyntaxException {
         ByteBuffer byteBuffer = StandardCharsets.UTF_8.encode(keyword);
         String search = StandardCharsets.UTF_8.decode(byteBuffer).toString();
