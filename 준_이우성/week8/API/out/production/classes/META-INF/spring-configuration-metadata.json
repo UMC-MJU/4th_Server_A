@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "",
+      "type": "com.june.API.properties.KakaoProperties",
+      "sourceType": "com.june.API.properties.KakaoProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "client-secret",
+      "type": "java.lang.String",
+      "sourceType": "com.june.API.properties.KakaoProperties"
+    },
+    {
+      "name": "javascript",
+      "type": "java.lang.String",
+      "sourceType": "com.june.API.properties.KakaoProperties"
+    },
+    {
+      "name": "restapi",
+      "type": "java.lang.String",
+      "sourceType": "com.june.API.properties.KakaoProperties"
+    }
+  ],
+  "hints": []
+}
