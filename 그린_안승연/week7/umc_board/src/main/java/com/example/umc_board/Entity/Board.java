@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @NoArgsConstructor
 @Getter
@@ -29,13 +31,17 @@ public class Board extends BaseTimeEntity{
     @ManyToOne(fetch = FetchType.LAZY)
     private User user;
 
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<KakaoPlace> placeList = new ArrayList<>();
+
     @Builder
     public Board(String title, String content,
-                 Category category, User user){
+                 Category category, User user, List<KakaoPlace> list){
         this.title = title;
         this.content = content;
         this.category = category;
         this.user = user;
+        this.placeList = list;
     }
 
     public void update(String title, String content, Category category){
