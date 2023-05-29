@@ -1,5 +1,6 @@
 package com.example.umc_board.Entity;
 
+import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -7,14 +8,14 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.net.URL;
 
-@NoArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
 @Table
 public class KakaoPlace {
 
     @Id
-    @Column
+    @Column(name = "kakaoplace_id")
     private Long id;
 
     @Column

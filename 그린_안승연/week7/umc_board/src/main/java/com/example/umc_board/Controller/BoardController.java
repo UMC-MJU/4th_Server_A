@@ -27,6 +27,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -46,6 +47,12 @@ public class BoardController {
     @ApiOperation(value = "게시물 페이지 API")
     public ResponseEntity<Page<Board>> list(@PageableDefault Pageable pageable, Model model){
         return ResponseEntity.ok(boardService.findBoardList(pageable));
+    }
+
+    @GetMapping("/search")
+    @ApiOperation(value = "게시물 검색 API")
+    public ResponseEntity<List<Board>> getSearchBoards(@RequestParam(value = "search") String search){
+        return ResponseEntity.ok(boardService.findBoardByTitle(search));
     }
 
     @GetMapping("/{id}")

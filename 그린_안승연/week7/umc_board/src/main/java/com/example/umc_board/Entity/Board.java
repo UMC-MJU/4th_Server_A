@@ -1,5 +1,6 @@
 package com.example.umc_board.Entity;
 
+import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,14 +9,14 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@NoArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
 @Table
 public class Board extends BaseTimeEntity{
 
     @Id
-    @Column
+    @Column(name = "board_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -29,6 +30,7 @@ public class Board extends BaseTimeEntity{
     private Category category;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
     private User user;
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
@@ -42,6 +44,10 @@ public class Board extends BaseTimeEntity{
         this.category = category;
         this.user = user;
         this.placeList = list;
+    }
+
+    public void setKakaoPlaces(KakaoPlace place){
+        this.placeList.add(place);
     }
 
     public void update(String title, String content, Category category){

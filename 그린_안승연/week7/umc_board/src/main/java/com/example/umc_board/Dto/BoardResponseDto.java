@@ -1,14 +1,15 @@
 package com.example.umc_board.Dto;
 
 import com.example.umc_board.Entity.Board;
+import com.example.umc_board.Entity.Category;
 import com.example.umc_board.Entity.KakaoPlace;
+import com.example.umc_board.Entity.User;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -24,32 +25,21 @@ public class BoardResponseDto {
     private String content;
 
     @ApiModelProperty(example = "커뮤니티")
-    private String category;
+    private Category category;
 
     @ApiModelProperty(example = "tester")
-    private String user;
+    private User user;
 
     @ApiModelProperty(example = "[[\"20522613\", \"거북당\", \"http://place.map.kakao.com/20522613\"]]")
-    private List<List<String>> placeList;
+    private List<KakaoPlace> placeList;
 
     public static BoardResponseDto of(Board board){
-        List<KakaoPlace> places = board.getPlaceList();
-        List<List<String>> list = new ArrayList<>();
-
-        for(KakaoPlace place : places){
-            List<String> tempList = new ArrayList<>();
-            tempList.add(place.getId().toString());
-            tempList.add(place.getTitle());
-            tempList.add(place.getUrl().toString());
-            list.add(tempList);
-        }
-
         return BoardResponseDto.builder()
                 .title(board.getTitle())
                 .content(board.getContent())
-                .category(board.getCategory().getValue())
-                .user(board.getUser().getName())
-                .placeList(list)
+                .category(board.getCategory())
+                .user(board.getUser())
+                .placeList(board.getPlaceList())
                 .build();
     }
 }
