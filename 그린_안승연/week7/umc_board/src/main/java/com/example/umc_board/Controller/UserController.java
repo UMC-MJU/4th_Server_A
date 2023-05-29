@@ -30,6 +30,6 @@ public class UserController {
     @PostMapping("/login")
     @ApiOperation(value = "로그인 API")
     public ResponseEntity<UserResponseDto> login(@RequestBody LoginRequestDto requestDto){
-        return ResponseEntity.ok(UserResponseDto.of(userService.findUser(requestDto.getEmail(), requestDto.getPassword())));
+        return ResponseEntity.ok(UserResponseDto.of(userService.findByEmail(requestDto.getEmail(), requestDto.getPassword())));
     }
 }

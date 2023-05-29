@@ -15,11 +15,15 @@ public class UserService {
 
     @Transactional
     public User saveUser(UserRequestDto requestDto){
-        return userRepository.save(requestDto.toEntity());
+        if(!userRepository.existsByEmail(requestDto.getEmail())){
+            return userRepository.save(requestDto.toEntity());
+        }else{
+            throw new RuntimeException("이미 가입된 이메일입니다.");
+        }
     }
 
     @Transactional
-    public User findUser(String email, String password){
+    public User findByEmail(String email, String password){
         User user = userRepository.findByEmail(email);
         if(user.getPassword().equals(password))
             return user;
